@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --cor1: #211915;
+  --cor2: #E30613;
+
+  --fonte-padrao: Arial, Helvetica, sans-serif;
+  --fonte-destaque: 'rough', sans-serif;
+  --fonte-titulos: 'mooli', sans-serif ;
+}
