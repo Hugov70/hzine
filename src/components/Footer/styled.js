@@ -18,12 +18,14 @@ export const Footerr = styled.footer`
     .groupOfAnchors {
         position: relative;
         margin-bottom: 15px;
+        padding: 1px;
         
     }
 
-    .groupOfAnchors .arrowIconR {
+    .groupOfAnchors .arrowIconR, .groupOfAnchors .arrowIconD {
         position: absolute;
         right: 5px;
+        top: 1px;
     }
 
     .groupOfAnchors button {
@@ -60,5 +62,21 @@ export const Footerr = styled.footer`
         margin-top: 30px;
         text-align: center;
     }
+
+    #anchors1, #anchors2, #anchors3 {
+        display: none;
+    }
+
+    #anchors1 p , #anchors2 p, #anchors3 p {
+        font-size: 0.8em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #arrowIconD1,  #arrowIconD2,  #arrowIconD3 {
+        display: none;
+    }
+
+    
     
 `
