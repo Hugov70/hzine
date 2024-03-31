@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Search = styled.div `
+export const Searchh = styled.div `
 
 
     * {
