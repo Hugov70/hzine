@@ -9,6 +9,8 @@ export const Footerr = styled.footer`
     --fonte-destaque: 'rough', sans-serif;
     --fonte-titulos: 'mooli', sans-serif ;
     }
+
+
     
     .footer {
         background-color: var(--cor1);
@@ -16,6 +18,7 @@ export const Footerr = styled.footer`
         font-weight: bold;
         padding: 20px;
         padding-top: 30px;
+        
     }
 
     .groupOfAnchors {

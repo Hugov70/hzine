@@ -1,17 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { primaryColor, primaryDarkColor, sucessColor, infoColor, warningColor, errorColor } from "../config/colors";
+import { sucessColor, infoColor, warningColor, errorColor } from "../config/colors";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
-    * {
-        margin: 0px;
-        padding: 0px;
-        outline: none;
-        box-sizing: border-box;
-    }
-
-    
-    body .Toastify .Toastify__toast-container .Toastify__toast--success {
+  
+  body .Toastify .Toastify__toast-container .Toastify__toast--success {
   background: ${sucessColor};
   color: white;
 }
