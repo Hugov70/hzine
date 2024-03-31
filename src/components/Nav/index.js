@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Pesquisa from "../Pesquisa";
 import Menu from "../Menu";
+import Pesquisa from '../Pesquisa'
 
 
 import { FaShoppingCart, FaBars } from "react-icons/fa";
@@ -24,7 +24,7 @@ export default function Nav() {
             {menuAberto ? <Menu /> :         <nav className="nav">
             <div id="noMenu">
                 <h1 id="h11">Hzine</h1>
-                
+                <Pesquisa />
                 <span className="car">
                     <FaShoppingCart />
                 </span>
