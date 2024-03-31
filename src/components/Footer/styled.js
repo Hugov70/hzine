@@ -10,15 +10,18 @@ export const Footerr = styled.footer`
     --fonte-titulos: 'mooli', sans-serif ;
     }
     
-    background-color: var(--cor1);
-    color: white;
-    padding: 20px;
-    font-weight: bold;
+    .footer {
+        background-color: var(--cor1);
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        padding-top: 30px;
+    }
 
     .groupOfAnchors {
         position: relative;
         margin-bottom: 15px;
-        padding: 1px;
+
         
     }
 

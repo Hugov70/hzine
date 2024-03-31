@@ -66,54 +66,53 @@ export default function Footer () {
 
     return (
         <Footerr>
-            <div className="groupOfAnchors" onClick={clicougroupOfAnchors}>
-                <p id="a1">Sobre a Hzine <AiOutlineArrowRight className="arrowIconR" id="arrowIconR1"/> <AiOutlineArrowDown className="arrowIconD" id="arrowIconD1"/></p>
-                <div id="anchors1">
-                    <p><a>Nossa história</a></p>
-                    <p><a>Trabalhe conosco</a></p>
+            <div className="footer">
+                <div className="groupOfAnchors" onClick={clicougroupOfAnchors}>
+                    <p id="a1">Sobre a Hzine <AiOutlineArrowRight className="arrowIconR" id="arrowIconR1"/> <AiOutlineArrowDown className="arrowIconD" id="arrowIconD1"/></p>
+                    <div id="anchors1">
+                        <p><a>Nossa história</a></p>
+                        <p><a>Trabalhe conosco</a></p>
+                    </div>
                 </div>
-            </div>
-            <div className="groupOfAnchors" onClick={clicougroupOfAnchors}>
-                <p id="a2">Ajuda <AiOutlineArrowRight className="arrowIconR" id="arrowIconR2"/> <AiOutlineArrowDown className="arrowIconD" id="arrowIconD2"/></p>
-                <div id="anchors2">
-                    <p><a>Fale conosco</a></p>
-                    <p><a>Política de privacidade</a></p>
+                <div className="groupOfAnchors" onClick={clicougroupOfAnchors}>
+                    <p id="a2">Ajuda <AiOutlineArrowRight className="arrowIconR" id="arrowIconR2"/> <AiOutlineArrowDown className="arrowIconD" id="arrowIconD2"/></p>
+                    <div id="anchors2">
+                        <p><a>Fale conosco</a></p>
+                        <p><a>Política de privacidade</a></p>
+                    </div>
                 </div>
-            </div>
-            <div className="groupOfAnchors" onClick={clicougroupOfAnchors}>
-                <p id="a3">Nossas marcas <AiOutlineArrowRight className="arrowIconR" id="arrowIconR3" /> <AiOutlineArrowDown className="arrowIconD" id="arrowIconD3"/></p>
-                <div id="anchors3">
-                    <p><a>Hzine1</a></p>
-                    <p><a>Hzine2</a></p>
+                <div className="groupOfAnchors" onClick={clicougroupOfAnchors}>
+                    <p id="a3">Nossas marcas <AiOutlineArrowRight className="arrowIconR" id="arrowIconR3" /> <AiOutlineArrowDown className="arrowIconD" id="arrowIconD3"/></p>
+                    <div id="anchors3">
+                        <p><a>Hzine1</a></p>
+                        <p><a>Hzine2</a></p>
+                    </div>
                 </div>
-            </div>
-            <div className="groupOfAnchors">
-                <p>Formas de pagamento</p>
-                <div id="paymentMethods">
-
+                <div className="groupOfAnchors">
+                    <p>Formas de pagamento</p>
                 </div>
-            </div>
-            <div className="groupOfAnchors">
-                <p>Selo de Segurança</p>
-                <img className="securityStamp"/>
-            </div>
-            <div className="groupOfAnchors">
-                <button>MAPA DO SITE</button>
-            </div>
-            <div className="network">
-                <p>Hzine</p>
-                <div className="networkLogos">
-                    <img src={facebookLogo} />
-                    <img src={instagramLogo}/>
-                    <img src={youtubeLogo} />
+                <div className="groupOfAnchors">
+                    <p>Selo de Segurança</p>
+                
                 </div>
-            </div>
-            <div className="address">
-                <p>
-                    Hzine Suplements LTDA <br/>
-                    Praça do GitHub, Internet, Computador <br/>
-                    CEP: 000000-000
-                </p>
+                <div className="groupOfAnchors">
+                    <button>MAPA DO SITE</button>
+                </div>
+                <div className="network">
+                    <p>Hzine</p>
+                    <div className="networkLogos">
+                        <img src={facebookLogo} />
+                        <img src={instagramLogo}/>
+                        <img src={youtubeLogo} />
+                    </div>
+                </div>
+                <div className="address">
+                    <p>
+                        Hzine Suplements LTDA <br/>
+                        Praça do GitHub, Internet, Computador <br/>
+                        CEP: 000000-000
+                    </p>
+                </div>
             </div>
         </Footerr>
     )
