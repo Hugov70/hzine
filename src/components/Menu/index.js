@@ -2,7 +2,7 @@ import React from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { IoCart, IoCloseOutline } from 'react-icons/io5';
 import { MdChatBubbleOutline } from 'react-icons/md';
-import githubLogo from "../../../imagens/githubLogo.png";
+import githubLogo from "../../imagens/githubLogo.png";
 
 export default function Menu() {
     const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Pesquisa from "./Pesquisa";
-import Menu from "./Menu";
+import Pesquisa from "../Pesquisa";
+import Menu from "../Menu";
 
 
 import { FaShoppingCart, FaBars } from "react-icons/fa";
