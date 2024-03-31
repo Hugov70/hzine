@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Search = styled.span `
-    @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
 
     * {
     margin: 0px;
@@ -11,10 +11,6 @@ export const Search = styled.span `
     :root {
     --cor1: #211915;
     --cor2: #E30613;
-
-    --fonte-padrao: Arial, Helvetica, sans-serif;
-    --fonte-destaque: 'rough', sans-serif;
-    --fonte-titulos: 'mooli', sans-serif ;
     }
 
     .form {
