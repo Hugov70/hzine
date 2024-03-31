@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Searchh = styled.div `
+export const BarraDeBusca = styled.div `
 
 
     * {
