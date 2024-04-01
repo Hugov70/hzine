@@ -1,22 +1,17 @@
-import { legacy_createStore as createStore} from 'redux';
+import { persistStore } from 'redux-persist';
+import { legacy_createStore as createStore, applyMiddleware} from 'redux';
+import createSagaMiddleware  from 'redux-saga'; 
 
-const initialState = {
-    menuAberto: false,
-}
+import persistedReducers from './modules/reduxPersist';
 
-const reducer = (state = initialState, action) => {
-    switch(action.type) {
-        case 'BOTAO_MENU_CLICADO': 
-            console.log(state)
-            const newState = { ...state }
-            newState.menuAberto = !newState.menuAberto;
-            return newState;
+import rootReducer from './modules/rootReducer';
+import rootSaga from './modules/rootSaga';
 
-        default:
-            return state; 
-    }
-}
+const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore( reducer ); 
+const store = createStore( persistedReducers(rootReducer), applyMiddleware(sagaMiddleware) ); 
 
+sagaMiddleware.run(rootSaga)
+
+export const persistor = persistStore(store);
 export default store; 

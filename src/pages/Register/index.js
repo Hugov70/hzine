@@ -3,22 +3,23 @@ import { useSelector } from "react-redux";
 import Nav from "../../components/Nav";
 import { toast } from 'react-toastify';
 import isEmail from "validator/lib/isEmail";
-
+import axios from "../../services/axios";
+import history from "../../services/history";
+import { get } from 'loadsh';
 
 import Footer from "../../components/Footer";
 import { Registerr } from "./styled";
 
 
-export default function Home() {
+export default function Register() {
     const menuAberto = useSelector(state => state.menuAberto);
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleSubmit (e) {
-        e.preventDefault();
-
+    async function handleSubmit (e) {
+        e.preventDefault(); 
         let formErrors = false;
 
         if(nome.length < 3 || nome.length > 255) {
@@ -38,6 +39,24 @@ export default function Home() {
         }
 
         if (formErrors) return;
+
+        try {
+            const response = await axios.post('/users', {
+                nome, password, email
+            })
+
+            console.log(response.data)
+
+            toast.success('Você fez seu cadastro');
+            history.push('/login')
+        } catch(err) {
+            const errors = get(err, 'response.data.errors');
+
+
+            
+        }
+
+
     }
 
     return (
@@ -72,7 +91,7 @@ export default function Home() {
                     </label>
                     <button type="submit">Criar conta</button>
                 </form>
-                
+                <a href="/"><button className="goBack">Voltar</button></a>
                 <Footer />
             </>
             

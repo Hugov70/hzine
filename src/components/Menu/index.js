@@ -29,6 +29,7 @@ export default function Menu() {
                 <div className="produtos">
                     <p><a>Roupas</a></p>
                     <p><a>Suplementos</a></p>
+                    <p><a>Acessórios</a></p>
                 </div>
                 <div className="userInteration">
                     <p><IoCart /> Meus pedidos</p>

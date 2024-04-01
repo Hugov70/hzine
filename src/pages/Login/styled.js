@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Registerr = styled.section`
+export const Loginn = styled.section`
     :root {
         --cor1: #211915;
         --cor2: #E30613;
@@ -15,17 +15,17 @@ export const Registerr = styled.section`
         text-align: center;
     }
 
-    .formRegister {
+    .formLogin {
         padding: 30px;
     }
 
-    .formRegister label {
+    .formLogin label {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
     }
 
-    .formRegister input {
+    .formLogin input {
         height: 40px;
         font-size: 18px;
         border: 1px solid #ddd;
@@ -38,7 +38,7 @@ export const Registerr = styled.section`
         }
     }
 
-    .formRegister button {
+    .formLogin button {
         width: 100%;
         height: 40px;
         background-color: var(--cor1);
@@ -47,7 +47,7 @@ export const Registerr = styled.section`
         border-radius: 4px;
     }
 
-    .formRegister button:hover {
+    .formLogin button:hover {
         background-color: var(--cor2);
     }
 
