@@ -12,7 +12,7 @@ import { Registerr } from "./styled";
 
 
 export default function Register() {
-    const menuAberto = useSelector(state => state.menuAberto);
+    const menuAberto = useSelector(state => state.menu.menuAberto)
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');

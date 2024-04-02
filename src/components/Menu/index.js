@@ -3,13 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { IoCart, IoCloseOutline } from 'react-icons/io5';
 import { MdChatBubbleOutline } from 'react-icons/md';
 import githubLogo from "../../imagens/githubLogo.png";
+import * as actions from '../../store/modules/menu/actions';
 
 export default function Menu() {
     const dispatch = useDispatch();
     function handleClick(e) {
-        dispatch({
-            type: 'BOTAO_MENU_CLICADO',
-        }); 
+        dispatch(actions.clicouMenu());
     }
     
     return (

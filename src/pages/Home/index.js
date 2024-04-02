@@ -10,8 +10,9 @@ import Footer from "../../components/Footer";
 import { Homee } from "./styled";
 
 
+
 export default function Home() {
-    const menuAberto = useSelector(state => state.menuAberto)
+    const menuAberto = useSelector(state => state.menu.menuAberto)
     return (
         <Homee>
             <Nav />

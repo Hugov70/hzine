@@ -6,18 +6,17 @@ import Pesquisa from '../Pesquisa'
 
 import { FaShoppingCart, FaBars } from "react-icons/fa";
 
+import * as actions from '../../store/modules/menu/actions';
 
 import { Navv } from "./styled";
 
 export default function Nav() {
     const dispatch = useDispatch();
     function handleClick(e) {
-        dispatch({
-            type: 'BOTAO_MENU_CLICADO',
-        }); 
+        dispatch(actions.clicouMenu(), console.log(menuAberto));
     }
 
-    const menuAberto = useSelector(state => state.menuAberto)
+    const menuAberto = useSelector(state => state.menu.menuAberto)
     
     return (
         <Navv>
