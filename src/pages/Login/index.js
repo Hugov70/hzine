@@ -6,14 +6,17 @@ import { useSelector } from "react-redux";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { Loginn } from './styled';
+import { get } from 'loadsh';
 
 
 import * as actions from '../../store/modules/auth/actions';
 
 
-export default function Login() {
+export default function Login(props) {
     const menuAberto = useSelector(state => state.menu.menuAberto)
     const dispatch = useDispatch();
+
+    const prevPath = get(props, 'location.state.prevPath', '/')
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -34,7 +37,7 @@ export default function Login() {
 
         if (formErrors) return;
 
-        dispatch(actions.loginRequest({ email, password }));
+        dispatch(actions.loginRequest({ email, password, prevPath }));
 
     }
 

@@ -52,8 +52,6 @@ export default function Register() {
         } catch(err) {
             const errors = get(err, 'response.data.errors');
 
-
-            
         }
 
 
