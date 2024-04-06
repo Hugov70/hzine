@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://api-rest-hzine.netlify.app',
+    baseURL: 'https://apiresthzine-production.up.railway.app/',
 });
