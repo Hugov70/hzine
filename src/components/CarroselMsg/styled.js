@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as colors from '../../config/colors'
 
 export const CarrosselM = styled.div`
   .carousel-container {
@@ -8,7 +9,7 @@ export const CarrosselM = styled.div`
   overflow: hidden;
   width: 100%;
   height: 70px;
-  background-color: azure;
+  background-color: ${colors.grayColor};
   padding-bottom: 5px;
   margin-bottom: 30px;
   }

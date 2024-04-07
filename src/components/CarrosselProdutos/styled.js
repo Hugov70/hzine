@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as colors from '../../config/colors';
 
 export const CarrosselP = styled.div`
 .carrosselProdutos {
@@ -6,7 +7,7 @@ export const CarrosselP = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
   overflow: hidden;
-  background-color: azure;
+  background-color: ${colors.grayColor};
   padding: 20px;
   padding-bottom: 60px;
     

@@ -16,23 +16,27 @@ export default function Menu() {
             <div className="menu" id="menu">
                 <header className="headerMenu">
                     <p className="boasVindas">Seja bem vindo</p>
-                    <p><a>Acesse seu perfil</a></p>
+                    <p><a href="/login">Acesse seu perfil</a></p>
                     <span className="menuClose" onClick={handleClick}>
                         <IoCloseOutline />
                     </span>
                 </header>
                 <aside>
                     <p>Conheça também</p>
-                    <img src={githubLogo} />
+                    <a href="https://github.com/Hugov70" target="external"><img src={githubLogo} /></a>
                 </aside>
                 <div className="produtos">
-                    <p><a>Roupas</a></p>
-                    <p><a>Suplementos</a></p>
-                    <p><a>Acessórios</a></p>
+                    <p><a href="/roupas">Roupas</a></p>
+                    <p><a href="/suplementos">Suplementos</a></p>
+                    <p><a href="/acessorios" >Acessórios</a></p>
                 </div>
                 <div className="userInteration">
-                    <p><IoCart /> Meus pedidos</p>
-                    <p><MdChatBubbleOutline /> Atendimento</p>
+                    <p><a href="">
+                        <IoCart /> Meus pedidos
+                    </a></p>
+                    <p><a href="">
+                        <MdChatBubbleOutline /> Atendimento
+                    </a></p>
                 </div>
             </div>
         </>

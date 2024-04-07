@@ -87,7 +87,9 @@ export const Navv = styled.nav`
     }
 
     .menu .headerMenu p a {
+        color: white;
         text-decoration: underline;
+        cursor: pointer;
     }
 
     .menu aside {
@@ -105,13 +107,16 @@ export const Navv = styled.nav`
     .menu aside img {
         margin-top: 5px;
         width: 50%;
+        cursor: pointer;
     }
 
     .menu .produtos p {
         font-size: 1.2em;
         margin-bottom: 8px;
         margin-left: 15px;
+        cursor: pointer;
     }
+
 
     .menu .userInteration {
         position: fixed;
@@ -127,8 +132,17 @@ export const Navv = styled.nav`
     .menu .userInteration p {
         font-size: 1.1em;
         margin: 20px 20px;
+        cursor: pointer;
     }
 
+    .menu .produtos p a, .menu .userInteration p a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu .produtos p:hover, .menu .userInteration p:hover {
+        text-decoration: underline;
+    }
 
 
 

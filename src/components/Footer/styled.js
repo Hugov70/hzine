@@ -42,6 +42,11 @@ export const Footerr = styled.footer`
         border: none;
     }
 
+    .groupOfAnchors button:hover {
+        background-color: white;
+        color: var(--cor2);
+    }
+
     .network p {
         font-size: 2em;
         text-align: center;
