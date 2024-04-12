@@ -46,13 +46,13 @@ export default function CarrosselProdutos() {
 
         <Slider {...settings}>
           <div>
-            <img src={RoupasIcon} />
+            <a href="/roupas"><img src={RoupasIcon} /></a>
           </div>
           <div>
-            <img src={SuplementosIcon} />
+            <a href="/suplementos"><img src={SuplementosIcon} /></a>
           </div>
           <div>
-            <img src={AcessoriosIcon} />
+            <a href="/acessorios"><img src={AcessoriosIcon} /></a>
           </div>
         </Slider>
       </div>

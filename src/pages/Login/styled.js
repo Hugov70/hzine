@@ -51,6 +51,20 @@ export const Loginn = styled.section`
         background-color: var(--cor2);
     }
 
+    p.withOutAcc  {
+        text-align: center;
+        text-decoration: underline;
+        margin: -20px 0px 30px 0px;
+
+
+    }
+
+    p.withOutAcc a {
+        color: black;
+        cursor: pointer;
+        opacity: 90%;
+    }
+
     button.goBack {
         display: block;
         margin: auto;

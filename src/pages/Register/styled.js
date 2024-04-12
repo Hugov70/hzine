@@ -51,6 +51,20 @@ export const Registerr = styled.section`
         background-color: var(--cor2);
     }
 
+    p.withAcc  {
+        text-align: center;
+        text-decoration: underline;
+        margin: -20px 0px 30px 0px;
+
+
+    }
+
+    p.withAcc a {
+        color: black;
+        cursor: pointer;
+        opacity: 90%;
+    }
+
     button.goBack {
         display: block;
         margin: auto;

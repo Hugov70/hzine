@@ -89,6 +89,7 @@ export default function Register() {
                     </label>
                     <button type="submit">Criar conta</button>
                 </form>
+                <p className="withAcc"><a href="/login">Já tem uma conta? Faça login</a></p>
                 <a href="/"><button className="goBack">Voltar</button></a>
                 <Footer />
             </>

@@ -67,6 +67,7 @@ export default function Login(props) {
                     </label>
                     <button type="submit">Entrar</button>
                 </form>
+                <p className="withOutAcc"><a href="/register">Não tem uma conta? Cadastre-se</a></p>
                 <a href="/"><button className="goBack">Voltar</button></a>
                 <Footer />
 
