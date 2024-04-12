@@ -30,7 +30,6 @@ export default function Suplemento() {
                         {SuplementosProdutos.map( suplemento => (
                             
                             <div key={String(suplemento.nome)} className="suplementoContainer">
-                                {console.log(suplemento)}
                                 <RoupaPicture>
                                     <img src={suplemento.imagemSuplemento} />
                                 </RoupaPicture>
