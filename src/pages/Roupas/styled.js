@@ -67,6 +67,7 @@ export const ContainerRoupas = styled.section`
     }
 
     .produtosRoupas .roupaContainer {
+        max-width: 150px;
         height: 350px;
     }
 
@@ -123,8 +124,8 @@ export const ContainerRoupas = styled.section`
 export const RoupaPicture = styled.div `
     background-color: ${colors.grayColor};
     img {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         padding: 20px;
     }
 `
