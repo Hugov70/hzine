@@ -11,7 +11,7 @@ import Newsletter from "../../components/Newsletter";
 
 
 export default function Acessorios() {
-
+    const carrinhoAberto = useSelector(state => state.carrinhodecompra.carrinhoAberto);
     const menuAberto = useSelector(state => state.menu.menuAberto)
     return (
         <ContainerRoupas>
@@ -30,7 +30,6 @@ export default function Acessorios() {
                         {AcessoriosProdutos.map( acessorio => (
                             
                             <div key={String(acessorio.nome)} className="acessorioContainer">
-                                {console.log(acessorio)}
                                 <AcessorioPicture>
                                     <img src={acessorio.imagemAcessorio} />
                                 </AcessorioPicture>

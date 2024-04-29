@@ -11,7 +11,7 @@ import Newsletter from "../../components/Newsletter";
 
 
 export default function Suplemento() {
-
+    const carrinhoAberto = useSelector(state => state.carrinhodecompra.carrinhoAberto);
     const menuAberto = useSelector(state => state.menu.menuAberto)
     return (
         <ContainerSuplemento>
