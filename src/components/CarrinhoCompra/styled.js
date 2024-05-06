@@ -111,6 +111,10 @@ export const Carrinho = styled.div `
         font-size: 1em;
     }
 
+    .buyCarFinal {
+        padding: 10px;
+    }
+
     
 `
 

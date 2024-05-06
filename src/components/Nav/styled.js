@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Navv = styled.nav`
-
     @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 
     * {
@@ -23,6 +22,7 @@ export const Navv = styled.nav`
         padding: 10px;
         position: relative;
         transition: left 1.3s ease; 
+        height: 100px;
     }
 
     .nav h1 {
@@ -145,7 +145,47 @@ export const Navv = styled.nav`
     }
 
     
+    @media screen and (min-width: 1280px) {
+        .nav h1 {
+            width: 100px;
+            text-align: left;
+            margin-left: 50px;
+        }
 
+        .nav span.car {
+            top: 35px;
+            right: 30px; 
+        }
+
+        .nav span.userLogin {
+            color: white;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 190px;
+        }
+
+        .nav span.userLogin .FaUser {
+            position: absolute;
+            top: 13px;
+            right: 230px; 
+            font-size: 2em;
+        }
+
+        .nav span.userLogin p {
+            position: absolute;
+            width: 100px;
+            top: 10px;
+            right: 120px; 
+        }
+
+        .nav span.userLogin a {
+            position: absolute;
+            width: 150px;
+            top: 30px;
+            right: 70px; 
+        }
+    }
 
 
 `

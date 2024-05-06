@@ -64,6 +64,7 @@ export const Bannerr = styled.div `
     } 
 
     .carrossel img {
-    width: 100%;
+        width: 100%;
+        max-height: 500px;
     }
 `

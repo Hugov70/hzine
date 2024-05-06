@@ -27,6 +27,7 @@ export const ContainerSuplemento = styled.section`
     }
     img {
         width: 100%;
+        max-height: 500px;
     }
 
     .filter {

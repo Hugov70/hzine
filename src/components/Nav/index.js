@@ -5,7 +5,7 @@ import CarrinhoDeCompra from "../CarrinhoCompra";
 import Pesquisa from '../Pesquisa'
 
 
-import { FaShoppingCart, FaBars } from "react-icons/fa";
+import { FaShoppingCart, FaBars, FaUser } from "react-icons/fa";
 
 import * as actionsMenu from '../../store/modules/menu/actions';
 import * as actionsCarrinho from '../../store/modules/carrinhodecompra/actions';
@@ -24,25 +24,35 @@ export default function Nav() {
 
     const menuAberto = useSelector(state => state.menu.menuAberto);
     const carrinhoAberto = useSelector(state => state.carrinhodecompra.carrinhoAberto);
-    
+
     return (
         <Navv>
-            {menuAberto ? <Menu /> : carrinhoAberto ? <> 
-            <CarrinhoDeCompra /> 
-            
-            </>  : <nav className="nav">
-            <div id="noMenu">
-                <h1 id="h11">Hzine</h1>
-                <Pesquisa />
-                <span className="car" onClick={handleClickCarrinho}>
-                    <FaShoppingCart />
-                </span>
-                <span className="menuBars" onClick={handleClickMenu}>
-                    <FaBars  />
-                </span>
-                
-            </div>
-        </nav>}
+            {menuAberto ? <Menu /> : carrinhoAberto ? <>
+                <CarrinhoDeCompra />
+
+            </> :
+
+                <nav className="nav">
+                    <div id="noMenu">
+                        <h1 id="h11">Hzine</h1>
+                        <Pesquisa />
+                        <span className="car" onClick={handleClickCarrinho}>
+                            <FaShoppingCart />
+                        </span>
+                        {window.innerWidth >= 1200 ? 
+                            <span className="userLogin">
+                                <FaUser className="FaUser" />
+                                <p>Bem vindo</p>
+                                <a>Acesse seu perfil</a>
+                            </span>
+                        :
+                            <span className="menuBars" onClick={handleClickMenu}>
+                                <FaBars />
+                            </span>}
+
+
+                    </div>
+                </nav>}
         </Navv>
 
     )

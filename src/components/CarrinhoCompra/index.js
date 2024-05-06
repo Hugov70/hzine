@@ -18,16 +18,16 @@ export default function CarrinhoDeCompra() {
     }
 
     const handleClickAdd = (e, nomeProduto, preco) => {
-        let precoProduto = String(preco); 
-        precoProduto = precoProduto.replace(',', '.'); 
-        dispatch(actions.addOneProduct({nomeProduto, precoProduto}));
+        let precoProduto = String(preco);
+        precoProduto = precoProduto.replace(',', '.');
+        dispatch(actions.addOneProduct({ nomeProduto, precoProduto }));
         setForceUpdate(prevState => !prevState);
     }
 
     const handleClickRemove = (e, nomeProduto, preco) => {
-        let precoProduto = String(preco); 
-        precoProduto = precoProduto.replace(',', '.'); 
-        dispatch(actions.removeOneProduct({nomeProduto, precoProduto}));
+        let precoProduto = String(preco);
+        precoProduto = precoProduto.replace(',', '.');
+        dispatch(actions.removeOneProduct({ nomeProduto, precoProduto }));
         setForceUpdate(prevState => !prevState);
     }
 
@@ -38,7 +38,7 @@ export default function CarrinhoDeCompra() {
 
     useEffect(() => {
 
-    }, [itensCarrinho, forceUpdate]); 
+    }, [itensCarrinho, forceUpdate]);
 
     return (
         <Carrinho>
@@ -48,20 +48,32 @@ export default function CarrinhoDeCompra() {
                     <h2>Carrinho</h2>
                 </div>
                 {itensCarrinho.length > 0 ?
-                    
-                    itensCarrinho.map(produto => (
-                        <div key={produto.nomeProduto} className="produtos">
-                            <ProdutoPicture>
-                                <img src={produto.imagemProduto} />
-                            </ProdutoPicture>
-                            <h2>{produto.nomeProduto}</h2>
-                            <span className="lixoBotao" onClick={e => handleClickDelete(e, produto.nomeProduto)}><IoTrash/></span>
-                            <p className="precoProduto">R${produto.precoTotalProduto.toString().substring(0, 5)}</p>
-                            <p className="quantidadeProduto">{produto.quantidade}</p>
-                            <span className="botaoAdicionar" onClick={e => handleClickAdd(e, produto.nomeProduto, produto.precoProduto)}>+</span>
-                            <span className="botaoRemover" onClick={e => handleClickRemove(e, produto.nomeProduto, produto.precoProduto)}><AiOutlineMinus/></span>
+                    <>
+                        {itensCarrinho.map(produto => (
+                            <div key={produto.nomeProduto} className="produtos">
+                                <ProdutoPicture>
+                                    <img src={produto.imagemProduto} />
+                                </ProdutoPicture>
+                                <h2>{produto.nomeProduto}</h2>
+                                <span className="lixoBotao" onClick={e => handleClickDelete(e, produto.nomeProduto)}><IoTrash /></span>
+                                <p className="precoProduto">R${produto.precoTotalProduto.toString().substring(0, 5)}</p>
+                                <p className="quantidadeProduto">{produto.quantidade}</p>
+                                <span className="botaoAdicionar" onClick={e => handleClickAdd(e, produto.nomeProduto, produto.precoProduto)}>+</span>
+                                <span className="botaoRemover" onClick={e => handleClickRemove(e, produto.nomeProduto, produto.precoProduto)}><AiOutlineMinus /></span>
+                            </div>
+                        ))}
+
+                        <div className="buyCarFinal">
+                            <p className="subtotal">Subtotal</p>
+                            <div className="calcularFrete">calcularFrete:
+                                <input type="text" placeholder="Digite seu cep"/>
+                                <button>Calcular</button>
+                            </div>
+                            <p className="total">Total</p>
+                            <button>Finalizar compra</button>
+                            <button>Continuar comprando</button>
                         </div>
-                    ))
+                    </>
 
 
                     :

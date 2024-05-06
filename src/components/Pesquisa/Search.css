@@ -29,3 +29,24 @@
         right: 5%;
         transform: translateY(-50%);
     }
+
+    @media screen and (min-width: 1280px) {
+        .form {
+            position: absolute;
+            top: -10px;
+            left: 300px;
+        }
+        
+        .form input[type='text'] {
+            width: 400px;
+    
+
+        }
+    
+        .form span.search {
+            position: absolute;
+            top: 47px;
+            right: 10px;
+            
+        }
+    }

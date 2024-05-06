@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import BannerGym from "../.././imagens/bannerGym.jpg";
-import BannerGym2 from "../.././imagens/bannerGym2.jpg";
+import bannerMainLandscape from '../../imagens/banners/bannerMainLandscape.png';
+import bannerMainPortrait from '../../imagens/banners/bannerMainPortrait.png'
+import bannerMain2Landscape from '../../imagens/banners/bannerMain2Landscape.png';
+import bannerMain2Portrait from '../../imagens/banners/bannerMain2Portrait.png';
 
 import { Bannerr } from './styled';
 
 
-export default function Banner (){
+export default function Banner() {
   const settings = {
     dots: true,
     infinite: true,
@@ -37,16 +39,16 @@ export default function Banner (){
 
   return (
     <Bannerr>
-          <div className='carrossel'>
-      <Slider {...settings}>
-        <div>
-          <img src={BannerGym} />
-        </div>
-        <div>
-        <img src={BannerGym2} />
-        </div>
-      </Slider>
-    </div>
+      <div className='carrossel'>
+        <Slider {...settings}>
+          <div>
+            {window.innerWidth >= 1200 ? <img src={bannerMainLandscape} />  : <img src={bannerMainPortrait} />}
+          </div>
+          <div>
+            {window.innerWidth >= 1200 ? <img src={bannerMain2Landscape} />  : <img src={bannerMain2Portrait} />}
+          </div>
+        </Slider>
+      </div>
     </Bannerr>
   );
 };
