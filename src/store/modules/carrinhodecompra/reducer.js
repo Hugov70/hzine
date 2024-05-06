@@ -27,32 +27,35 @@ export default function (state = initialState, action) {
                 newState.itensCarrinho[produtoRepetido].quantidade = quantidade;
                 newState.itensCarrinho[produtoRepetido].precoTotalProduto = precoTotalProduto;
             } else {
-                newState.itensCarrinho.push({nomeProduto, precoProduto, precoTotalProduto, imagemProduto, quantidade: 1 })
+                newState.itensCarrinho.push({ nomeProduto, precoProduto, precoTotalProduto, imagemProduto, quantidade: 1 })
             }
 
-            return newState; 
+            const valorTotalItens = calcularValorTotal(newState);
+            newState.valorItensCarrinho = valorTotalItens;
+            return newState;
         }
 
         case types.ADD_ONE_PRODUCT: {
-             const newState = { ...state};
-             const nomeProduto = action.payload.nomeProduto;
-             const precoProduto = Number(action.payload.precoProduto);
-             const index = newState.itensCarrinho.findIndex(item => item.nomeProduto === nomeProduto);
-             const quantidade = newState.itensCarrinho[index].quantidade + 1;
-             let precoTotalProduto = quantidade * precoProduto;
+            const newState = { ...state };
+            const nomeProduto = action.payload.nomeProduto;
+            const precoProduto = Number(action.payload.precoProduto);
+            const index = newState.itensCarrinho.findIndex(item => item.nomeProduto === nomeProduto);
+            const quantidade = newState.itensCarrinho[index].quantidade + 1;
+            let precoTotalProduto = quantidade * precoProduto;
 
-             if (quantidade >= 1) {
+            if (quantidade >= 1) {
                 newState.itensCarrinho[index].quantidade = quantidade;
                 newState.itensCarrinho[index].precoTotalProduto = precoTotalProduto;
-             }
-             
-             
-              return newState; 
-             
+            }
+
+            const valorTotalItens = calcularValorTotal(newState);
+            newState.valorItensCarrinho = valorTotalItens;
+            return newState;
+
         }
 
         case types.REMOVE_ONE_PRODUCT: {
-            const newState = { ...state};
+            const newState = { ...state };
             const nomeProduto = action.payload.nomeProduto;
             const precoProduto = Number(action.payload.precoProduto);
             const index = newState.itensCarrinho.findIndex(item => item.nomeProduto === nomeProduto);
@@ -62,20 +65,24 @@ export default function (state = initialState, action) {
             if (quantidade >= 1) {
                 newState.itensCarrinho[index].quantidade = quantidade;
                 newState.itensCarrinho[index].precoTotalProduto = precoTotalProduto;
-             }
-            
-             return newState; 
-            
-       }
+            }
 
-       case types.DELETE_PRODUCT: {
-        const newState = { ...state};
-        const nomeProduto = action.payload;
-        const index = newState.itensCarrinho.findIndex(item => item.nomeProduto === nomeProduto);
-        newState.itensCarrinho.splice(index, 1);
-       }
+            const valorTotalItens = calcularValorTotal(newState);
+            newState.valorItensCarrinho = valorTotalItens;
+            return newState;
 
-        
+        }
+
+        case types.DELETE_PRODUCT: {
+            const newState = { ...state };
+            const nomeProduto = action.payload;
+            const index = newState.itensCarrinho.findIndex(item => item.nomeProduto === nomeProduto);
+            newState.itensCarrinho.splice(index, 1);
+            const valorTotalItens = calcularValorTotal(newState);
+            newState.valorItensCarrinho = valorTotalItens;
+        }
+
+
 
 
         default:
@@ -86,8 +93,18 @@ export default function (state = initialState, action) {
 function verificarProduto(array, chave, valor) {
     for (let i = 0; i < array.length; i++) {
         if (array[i][chave] === valor) {
-            return i; 
+            return i;
         }
     }
-    return false; 
+    return false;
+}
+
+function calcularValorTotal(state) {
+    const newState = { ...state };
+    let valorTotalItens = 0;
+    newState.itensCarrinho.forEach(item => {
+        const itemvalor = Number(item.precoTotalProduto)
+        valorTotalItens += itemvalor;
+    });
+    return valorTotalItens;
 }

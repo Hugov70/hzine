@@ -11,6 +11,7 @@ import { ProdutoPicture } from "./styled";
 export default function CarrinhoDeCompra() {
     const dispatch = useDispatch();
     const itensCarrinho = useSelector(state => state.carrinhodecompra.itensCarrinho);
+    const valorTotalCarrinho = useSelector (state => state.carrinhodecompra.valorItensCarrinho)
     const [forceUpdate, setForceUpdate] = useState(false);
 
     function handleClick(e) {
@@ -56,7 +57,7 @@ export default function CarrinhoDeCompra() {
                                 </ProdutoPicture>
                                 <h2>{produto.nomeProduto}</h2>
                                 <span className="lixoBotao" onClick={e => handleClickDelete(e, produto.nomeProduto)}><IoTrash /></span>
-                                <p className="precoProduto">R${produto.precoTotalProduto.toString().substring(0, 5)}</p>
+                                <p className="precoProduto">R${produto.precoTotalProduto.toString().substring(0, 5).replace('.',',')}</p>
                                 <p className="quantidadeProduto">{produto.quantidade}</p>
                                 <span className="botaoAdicionar" onClick={e => handleClickAdd(e, produto.nomeProduto, produto.precoProduto)}>+</span>
                                 <span className="botaoRemover" onClick={e => handleClickRemove(e, produto.nomeProduto, produto.precoProduto)}><AiOutlineMinus /></span>
@@ -64,14 +65,14 @@ export default function CarrinhoDeCompra() {
                         ))}
 
                         <div className="buyCarFinal">
-                            <p className="subtotal">Subtotal</p>
-                            <div className="calcularFrete">calcularFrete:
+                            <p className="subtotal">Subtotal: <span className="subtotalValue">{valorTotalCarrinho.toString().substring(0, 5).replace('.',',')}</span></p>
+                            <div className="calcularFrete">Calcular Frete: 
                                 <input type="text" placeholder="Digite seu cep"/>
                                 <button>Calcular</button>
                             </div>
-                            <p className="total">Total</p>
-                            <button>Finalizar compra</button>
-                            <button>Continuar comprando</button>
+                            <p className="total">Total <span className="totalValue">{valorTotalCarrinho.toString().substring(0, 5).replace('.',',')}</span></p>
+                            <button className="finalizarCompra">Finalizar compra</button>
+                            <button className="continuarComprando">Continuar comprando</button>
                         </div>
                     </>
 

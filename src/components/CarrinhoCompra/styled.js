@@ -113,6 +113,59 @@ export const Carrinho = styled.div `
 
     .buyCarFinal {
         padding: 10px;
+        position: static;
+        bottom: 0vh;
+        font-size: 0.9em;
+    }
+
+    .buyCarFinal p {
+        margin: 10px 0px;
+    }
+
+    .buyCarFinal p  span.subtotalValue {
+        position: absolute;
+        right: 10px;
+    }
+
+    .buyCarFinal .calcularFrete input[type="text"] {
+        width: 120px;
+        height: 25px;
+        margin: 0px 5px 0px 10px;
+        padding: 5px;
+    }
+
+    .buyCarFinal .calcularFrete button {
+        width: 75px;
+        height: 30px;
+        color: ${colors.secondColor};
+        background-color: ${colors.grayColor};
+        border: 1px solid ${colors.secondColor};
+        cursor: pointer;
+    }
+
+    .buyCarFinal p  span.totalValue {
+        position: absolute;
+        right: 10px;
+    }
+
+    .buyCarFinal button.finalizarCompra {
+        width: 100%;
+        height: 35px;
+        background-color: ${colors.secondColor};
+        color: white;
+        font-weight: bolder;
+        border: 1px solid ${colors.primaryColor};
+        margin: 10px 0px;
+        cursor: pointer;
+    }
+
+    .buyCarFinal button.continuarComprando {
+        width: 100%;
+        height: 35px;
+        color: ${colors.primaryColor};
+        border: 1px solid ${colors.primaryColor};
+        margin: 10px 0px;
+        cursor: pointer;
     }
 
     
