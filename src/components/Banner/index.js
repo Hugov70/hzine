@@ -11,6 +11,20 @@ import { Bannerr } from './styled';
 
 
 export default function Banner() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -37,15 +51,16 @@ export default function Banner() {
     ],
   };
 
+
   return (
     <Bannerr>
       <div className='carrossel'>
         <Slider {...settings}>
           <div>
-            {window.innerWidth >= 1200 ? <img src={bannerMainLandscape} />  : <img src={bannerMainPortrait} />}
+            {window.innerWidth >= 600 ? <img src={bannerMainLandscape} /> : <img src={bannerMainPortrait} />}
           </div>
           <div>
-            {window.innerWidth >= 1200 ? <img src={bannerMain2Landscape} />  : <img src={bannerMain2Portrait} />}
+            {window.innerWidth >= 600 ? <img src={bannerMain2Landscape} /> : <img src={bannerMain2Portrait} />}
           </div>
         </Slider>
       </div>

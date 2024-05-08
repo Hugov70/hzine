@@ -31,28 +31,47 @@ export default function Nav() {
                 <CarrinhoDeCompra />
 
             </> :
-
-                <nav className="nav">
-                    <div id="noMenu">
-                        <h1 id="h11">Hzine</h1>
-                        <Pesquisa />
-                        <span className="car" onClick={handleClickCarrinho}>
-                            <FaShoppingCart />
-                        </span>
-                        {window.innerWidth >= 1200 ? 
-                            <span className="userLogin">
-                                <FaUser className="FaUser" />
-                                <p>Bem vindo</p>
-                                <a>Acesse seu perfil</a>
+                <>
+                    <nav className="nav">
+                        <div id="noMenu">
+                            <a href="/">
+                                <h1 id="h11">Hzine</h1>
+                            </a>
+                            <Pesquisa />
+                            <span className="car" onClick={handleClickCarrinho}>
+                                <FaShoppingCart />
                             </span>
-                        :
-                            <span className="menuBars" onClick={handleClickMenu}>
-                                <FaBars />
-                            </span>}
+                            {window.innerWidth >= 1200 ?
+                                <>
+                                    <span className="userLogin">
+                                        <FaUser className="FaUser" />
+                                        <p>Bem vindo</p>
+                                        <a className="login" href="/login">Acesse seu perfil</a>
+                                    </span>
+                                </>
 
 
+                                :
+                                <span className="menuBars" onClick={handleClickMenu}>
+                                    <FaBars />
+                                </span>}
+
+
+                        </div>
+                    </nav>
+                    <div className="categorias">
+                        <a href="/roupas">
+                            <div>Roupas</div>
+                        </a>
+                        <a href="/suplementos">
+                            <div>Suplementos</div>
+                        </a>
+                        <a href="/acessorios">
+                            <div>Acessoriso</div>
+                        </a>
                     </div>
-                </nav>}
+                </>
+            }
         </Navv>
 
     )

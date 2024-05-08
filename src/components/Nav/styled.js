@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as colors from '../../config/colors'
 
 export const Navv = styled.nav`
     @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
@@ -22,7 +23,7 @@ export const Navv = styled.nav`
         padding: 10px;
         position: relative;
         transition: left 1.3s ease; 
-        height: 100px;
+        height: 50px;
     }
 
     .nav h1 {
@@ -185,6 +186,50 @@ export const Navv = styled.nav`
             top: 30px;
             right: 70px; 
         }
+
+        
+        .nav  a {
+            text-decoration: none;
+            
+        }
+
+        .nav  .userLogin a{
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        
+
+        .categorias {
+           background-color: #393939;
+           color: white;
+           width: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           
+        }
+
+        .categorias div {
+            margin-left: 50px;
+            cursor: pointer;
+            padding: 7px;
+        }
+
+        .categorias div:hover {
+            background-color: ${colors.secondColor};
+            border-radius: 6px;
+        }
+
+        .categorias a{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
     }
 
 
