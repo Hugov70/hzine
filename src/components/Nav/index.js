@@ -34,9 +34,7 @@ export default function Nav() {
                 <>
                     <nav className="nav">
                         <div id="noMenu">
-                            <a href="/">
-                                <h1 id="h11">Hzine</h1>
-                            </a>
+                            <h1 id="h11"><a href="/">Hzine</a></h1>
                             <Pesquisa />
                             <span className="car" onClick={handleClickCarrinho}>
                                 <FaShoppingCart />

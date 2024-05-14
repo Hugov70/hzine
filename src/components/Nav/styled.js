@@ -32,7 +32,10 @@ export const Navv = styled.nav`
         text-align: center;
         margin-top: 5px;
         font-size: 2em;
+       
     }
+
+
 
     .nav span.car {
         font-size: 1.4em;
@@ -151,6 +154,12 @@ export const Navv = styled.nav`
             width: 100px;
             text-align: left;
             margin-left: 50px;
+            color: white;
+        }
+
+        .nav h1 a {
+            color: white;
+            cursor: pointer;
         }
 
         .nav span.car {
