@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Menu from "../Menu";
 import CarrinhoDeCompra from "../CarrinhoCompra";
@@ -14,6 +14,21 @@ import { Navv } from "./styled";
 
 export default function Nav() {
     const dispatch = useDispatch();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+
     function handleClickMenu(e) {
         dispatch(actionsMenu.clicouMenu());
     }
@@ -57,17 +72,21 @@ export default function Nav() {
 
                         </div>
                     </nav>
-                    <div className="categorias">
-                        <a href="/roupas">
-                            <div>Roupas</div>
-                        </a>
-                        <a href="/suplementos">
-                            <div>Suplementos</div>
-                        </a>
-                        <a href="/acessorios">
-                            <div>Acessoriso</div>
-                        </a>
-                    </div>
+                    {window.innerWidth >= 1200 ?
+                                            <div className="categorias">
+                                            <a href="/roupas">
+                                                <div>Roupas</div>
+                                            </a>
+                                            <a href="/suplementos">
+                                                <div>Suplementos</div>
+                                            </a>
+                                            <a href="/acessorios">
+                                                <div>Acessoriso</div>
+                                            </a>
+                                        </div> : ''
+
+                    }
+
                 </>
             }
         </Navv>

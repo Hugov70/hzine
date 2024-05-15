@@ -23,7 +23,7 @@ export const Navv = styled.nav`
         padding: 10px;
         position: relative;
         transition: left 1.3s ease; 
-        height: 50px;
+        height: 120px;
     }
 
     .nav h1 {
@@ -34,6 +34,12 @@ export const Navv = styled.nav`
         font-size: 2em;
        
     }
+
+    .nav h1 a {
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
 
 
@@ -150,11 +156,16 @@ export const Navv = styled.nav`
 
     
     @media screen and (min-width: 1280px) {
+        .nav {
+            height: 50px;
+        }
+        
         .nav h1 {
             width: 100px;
             text-align: left;
             margin-left: 50px;
             color: white;
+
         }
 
         .nav h1 a {
