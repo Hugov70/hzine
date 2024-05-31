@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import * as actions from '../../store/modules/carrinhodecompra/actions';
 import { Carrinho } from "./styled";
 import { ProdutoPicture } from "./styled";
+import './Carrinho.css'
 
 export default function CarrinhoDeCompra() {
     const dispatch = useDispatch();
@@ -42,7 +43,7 @@ export default function CarrinhoDeCompra() {
     }, [itensCarrinho, forceUpdate]);
 
     return (
-        <Carrinho>
+        <Carrinho className="carrinhoCompras">
             <div className="carrinhoDeCompras">
                 <div className="header">
                     <IoCloseOutline onClick={handleClick} className="closeButton" />
@@ -52,7 +53,7 @@ export default function CarrinhoDeCompra() {
                     <>
                         {itensCarrinho.map(produto => (
                             <div key={produto.nomeProduto} className="produtos">
-                                <ProdutoPicture>
+                                <ProdutoPicture className=".produtoPicture">
                                     <img src={produto.imagemProduto} />
                                 </ProdutoPicture>
                                 <h2>{produto.nomeProduto}</h2>
