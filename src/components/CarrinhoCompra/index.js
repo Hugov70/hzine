@@ -53,7 +53,7 @@ export default function CarrinhoDeCompra() {
                 <>
                     {itensCarrinho.map(produto => (
                         <div key={produto.nomeProduto} className="produtos">
-                            <div className=".produtoPicture">
+                            <div className="produtoPicture">
                                 <img src={produto.imagemProduto} />
                             </div>
                             <h2>{produto.nomeProduto}</h2>
