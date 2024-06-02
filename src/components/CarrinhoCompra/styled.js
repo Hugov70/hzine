@@ -172,7 +172,7 @@ export const Carrinho = styled.div `
 `
 
 export const ProdutoPicture = styled.div `
-    /* background-color: ${colors.grayColor};
+    background-color: ${colors.grayColor};
     max-width: 100px;
     display: flex;
     align-items: center;
@@ -181,5 +181,5 @@ export const ProdutoPicture = styled.div `
         width: 70px;
         height: 70px;
         padding: 20px;
-    } */
+    }
 `
