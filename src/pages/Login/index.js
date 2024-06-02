@@ -48,27 +48,29 @@ export default function Login(props) {
             <Nav />
             {!menuAberto ? <>
                 <h2>Login</h2>
-                <form className="formLogin" onSubmit={handleSubmit}>
-                    <label htmlFor="Email">
-                        Email:
-                        <input type="email"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            placeholder="Seu email"
-                        />
-                    </label>
-                    <label htmlFor="password">
-                        Senha:
-                        <input type="password"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                            placeholder="Sua senha"
-                        />
-                    </label>
-                    <button type="submit">Entrar</button>
-                </form>
-                <p className="withOutAcc"><a href="/register">Não tem uma conta? Cadastre-se</a></p>
-                <a href="/"><button className="goBack">Voltar</button></a>
+                <main className="loginMain">
+                    <form className="formLogin" onSubmit={handleSubmit}>
+                        <label htmlFor="Email">
+                            Email:
+                            <input type="email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                placeholder="Seu email"
+                            />
+                        </label>
+                        <label htmlFor="password">
+                            Senha:
+                            <input type="password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                                placeholder="Sua senha"
+                            />
+                        </label>
+                        <button type="submit">Entrar</button>
+                    </form>
+                    <p className="withOutAcc"><a href="/register">Não tem uma conta? Cadastre-se</a></p>
+                    <a href="/"><button className="goBack">Voltar</button></a>
+                </main>
                 <Footer />
 
             </>

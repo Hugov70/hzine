@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Loginn = styled.section`
+   
     :root {
         --cor1: #211915;
         --cor2: #E30613;
@@ -13,6 +14,11 @@ export const Loginn = styled.section`
     h2 {
         margin-top: 30px;
         text-align: center;
+    }
+
+    main.loginMain {
+        max-width: 600px;
+        margin: auto;
     }
 
     .formLogin {

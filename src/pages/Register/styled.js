@@ -15,6 +15,11 @@ export const Registerr = styled.section`
         text-align: center;
     }
 
+    main.registerMain {
+        max-width: 600px;
+        margin: auto; 
+    }
+
     .formRegister {
         padding: 30px;
     }

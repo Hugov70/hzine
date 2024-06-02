@@ -18,22 +18,22 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    async function handleSubmit (e) {
-        e.preventDefault(); 
+    async function handleSubmit(e) {
+        e.preventDefault();
         let formErrors = false;
 
-        if(nome.length < 3 || nome.length > 255) {
+        if (nome.length < 3 || nome.length > 255) {
             formErrors = true;
             toast.error('Campo nome deve ter entre 3 e 255 caracteres')
         }
 
-        
-        if(!isEmail(email)) {
+
+        if (!isEmail(email)) {
             formErrors = true;
             toast.error('Email inválido')
         }
 
-        if(password.length < 6 || password.length > 50) {
+        if (password.length < 6 || password.length > 50) {
             formErrors = true;
             toast.error('A senha deve ter entre 6 e 50 caracteres')
         }
@@ -49,7 +49,7 @@ export default function Register() {
 
             toast.success('Você fez seu cadastro');
             history.push('/login')
-        } catch(err) {
+        } catch (err) {
             const errors = get(err, 'response.data.errors');
 
         }
@@ -60,43 +60,45 @@ export default function Register() {
     return (
         <Registerr>
             <Nav />
-            {!menuAberto ?  <>
+            {!menuAberto ? <>
                 <h2>Crie sua conta</h2>
-                <form className="formRegister"  onSubmit={handleSubmit}>
-                    <label htmlFor="nome">
-                        Nome:
-                        <input type="text" 
-                        value={nome} 
-                        onChange={e => setNome(e.target.value)}
-                        placeholder="Seu nome"
-                        />
-                    </label>
-                    <label htmlFor="Email">
-                        Email:
-                        <input type="email" 
-                        value={email} 
-                        onChange={e => setEmail(e.target.value)}
-                        placeholder="Seu email"
-                        />
-                    </label>
-                    <label htmlFor="password">
-                        Senha:
-                        <input type="password" 
-                        value={password} 
-                        onChange={e => setPassword(e.target.value)}
-                        placeholder="Sua senha"
-                        />
-                    </label>
-                    <button type="submit">Criar conta</button>
-                </form>
-                <p className="withAcc"><a href="/login">Já tem uma conta? Faça login</a></p>
-                <a href="/"><button className="goBack">Voltar</button></a>
+                <main className="registerMain">
+                    <form className="formRegister" onSubmit={handleSubmit}>
+                        <label htmlFor="nome">
+                            Nome:
+                            <input type="text"
+                                value={nome}
+                                onChange={e => setNome(e.target.value)}
+                                placeholder="Seu nome"
+                            />
+                        </label>
+                        <label htmlFor="Email">
+                            Email:
+                            <input type="email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                placeholder="Seu email"
+                            />
+                        </label>
+                        <label htmlFor="password">
+                            Senha:
+                            <input type="password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                                placeholder="Sua senha"
+                            />
+                        </label>
+                        <button type="submit">Criar conta</button>
+                    </form>
+                    <p className="withAcc"><a href="/login">Já tem uma conta? Faça login</a></p>
+                    <a href="/"><button className="goBack">Voltar</button></a>
+                </main>
                 <Footer />
             </>
-            
-            
-            : ''} 
-            
+
+
+                : ''}
+
         </Registerr>
     )
 };
