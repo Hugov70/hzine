@@ -2,7 +2,7 @@ import styled from "styled-components";
 import * as colors from '../../config/colors'
 
 export const Carrinho = styled.div `
-    width: 330px;
+    /* width: 330px;
     position: fixed;
     top: 0px;
     right: 0px;
@@ -166,13 +166,13 @@ export const Carrinho = styled.div `
         border: 1px solid ${colors.primaryColor};
         margin: 10px 0px;
         cursor: pointer;
-    }
+    } */
 
     
 `
 
 export const ProdutoPicture = styled.div `
-    background-color: ${colors.grayColor};
+    /* background-color: ${colors.grayColor};
     max-width: 100px;
     display: flex;
     align-items: center;
@@ -181,5 +181,5 @@ export const ProdutoPicture = styled.div `
         width: 70px;
         height: 70px;
         padding: 20px;
-    }
+    } */
 `

@@ -43,7 +43,7 @@ export default function CarrinhoDeCompra() {
     }, [itensCarrinho, forceUpdate]);
 
     return (
-        <Carrinho className="carrinhoCompras">
+        <div className="carrinhoCompras">
             <div className="carrinhoDeCompras">
                 <div className="header">
                     <IoCloseOutline onClick={handleClick} className="closeButton" />
@@ -53,9 +53,9 @@ export default function CarrinhoDeCompra() {
                     <>
                         {itensCarrinho.map(produto => (
                             <div key={produto.nomeProduto} className="produtos">
-                                <ProdutoPicture className=".produtoPicture">
+                                <div className=".produtoPicture">
                                     <img src={produto.imagemProduto} />
-                                </ProdutoPicture>
+                                </div>
                                 <h2>{produto.nomeProduto}</h2>
                                 <span className="lixoBotao" onClick={e => handleClickDelete(e, produto.nomeProduto)}><IoTrash /></span>
                                 <p className="precoProduto">R${produto.precoTotalProduto.toString().substring(0, 5).replace('.',',')}</p>
@@ -89,6 +89,6 @@ export default function CarrinhoDeCompra() {
 
                 }
             </div>
-        </Carrinho>
+        </div>
     )
 }
